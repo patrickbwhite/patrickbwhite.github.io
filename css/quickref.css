@@ -8,7 +8,6 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /*font-family: Arial;*/
     font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
     width:100%;
     margin-bottom:8px;
@@ -69,15 +68,16 @@
 /* ------------------------------------------------------------------------- */
 /* Items */
 /* ------------------------------------------------------------------------- */
-
 .item {
-    margin-bottom: 8px;
+    margin-bottom: 16px;
+	margin-right: 8px;
     float: left;
     display: flex;
     font-size: inherit;
     vertical-align: top;
     box-sizing: border-box;
     cursor: pointer;
+	border-radius: 3px;
 }
 
 .item-icon {
@@ -102,9 +102,10 @@
 .item-desc {
     font-style: italic;
     font-size: inherit;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 }
 
 .item-text-container {
@@ -112,6 +113,7 @@
     padding-right: 4px;
     font-size: inherit;
     height: 100%;
+	display: grid;
 }
 
 
@@ -166,6 +168,14 @@
     color: ForestGreen;
 }
 
+/* ------------------------------------------------------------------------- */
+/* Hover Indicators of Clickable Areas */
+/* ------------------------------------------------------------------------- */
+.item:hover {
+   transition: box-shadow,text-decoration 0.25s ease-in-out;
+   box-shadow: rgba(13,55,13,0.8) -2px 2px 3px 0px;
+   background-color: rgba(0,0,0,0.05);
+}
 
 /* ------------------------------------------------------------------------- */
 /* Page container */
@@ -268,7 +278,7 @@ p:first-child {
 @media (min-width:    0px) and (max-width:  479px) {
     .fontsize { font-size: 12pt; } 
     .iconsize { width: 44px; height: 44px;} 
-    .itemsize { height: 44px; width: 100%; } 
+    .itemsize { height: 44px; width: 96%; } 
     .modalsize {} 
 }
 
@@ -276,7 +286,7 @@ p:first-child {
 @media (min-width:  480px) and (max-width:  767px) {
     .fontsize { font-size: 11pt; }
     .iconsize { width: 40px; height: 40px;}
-    .itemsize { height: 40px; width:  50%; }
+    .itemsize { height: 40px; width:  46%; }
     .modalsize {}
 }
 
@@ -284,7 +294,7 @@ p:first-child {
 @media (min-width:  768px) and (max-width:  991px) {
     .fontsize { font-size: 11pt; }
     .iconsize { width: 40px; height: 40px;}
-    .itemsize { height: 40px; width:  33%; }
+    .itemsize { height: 40px; width:  30%; }
     .modalsize { width: 600px; margin: 30px auto; }
 }
 
@@ -292,7 +302,7 @@ p:first-child {
 @media (min-width:  992px) and (max-width: 1199px) {
     .fontsize { font-size: 12pt; }
     .iconsize { width: 44px; height: 44px;}
-    .itemsize { height: 44px; width:  33%; }
+    .itemsize { height: 40px; width:  30%; }
     .modalsize { width: 600px; margin: 30px auto; }
 }
 
@@ -300,7 +310,7 @@ p:first-child {
 @media (min-width: 1200px) and (max-width: 1599px) {
     .fontsize { font-size: 12pt; }
     .iconsize { width: 44px; height: 44px;}
-    .itemsize { height: 44px; width:  25%; }
+    .itemsize { height: 44px; width:  23%; }
     .modalsize { width: 600px; margin: 30px auto; }
 }
 
@@ -308,7 +318,7 @@ p:first-child {
 @media (min-width: 1600px) {
     .fontsize { font-size: 12pt; }
     .iconsize { width: 44px; height: 44px;}
-    .itemsize { height: 44px; width:  20%; }
+    .itemsize { height: 44px; width:  18%; }
     .modalsize { width: 600px; margin: 30px auto; }
 }
 
@@ -316,7 +326,6 @@ p:first-child {
 @media print {
     .fontsize { font-size: 10pt; }
     .iconsize { width: 36px; height: 36px;}
-    .itemsize { height: 36px; width:  33%; }
+    .itemsize { height: 36px; width:  30%; }
     .modalsize {}
 }
-
