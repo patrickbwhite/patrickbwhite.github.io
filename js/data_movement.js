@@ -10,7 +10,8 @@ data_movement = [
             "You can move through a nonhostile creature's space.",
             "You can move through a hostile creature's space only if the creature is at least two sizes larger or smaller than you.",
             "Another creature's space is difficult terrain for you.",
-            "Whether a creature is a friend or an enemy, you can't willingly end your move in its space."
+            "Whether a creature is a friend or an enemy, you can't willingly end your move in its space.",
+			"You can break up your movement on your turn, using some of your speed before and after your action. For example, if you have a speed of 30 feet, you can move 10 feet, take your action, and then move 20 feet."
         ]
     },
     {
